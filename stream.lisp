@@ -45,7 +45,7 @@
   (when *print-pretty*
     (terpri s)))
 
-(serapeum:defmethods html-stream (s col line last-char base-stream
+(defmethods html-stream (s col line last-char base-stream
                                     elastic-newline)
   (:method ensure-html-stream (s)
     s)
