@@ -1,9 +1,37 @@
 ;;;; package.lisp
 
 (defpackage #:spinneret
-  (:use #:cl #:parenscript #:alexandria
-        #:trivial-gray-streams)
-  (:shadowing-import-from #:alexandria #:switch)
+  (:use #:cl)
+  (:import-from #:parenscript
+                #:concat-constant-strings ;; unexported function
+                #:define-ps-symbol-macro
+                #:defpsmacro
+                #:with-ps-gensyms)
+  (:import-from #:trivial-gray-streams
+                #:fundamental-character-output-stream
+                #:stream-write-char #:stream-write-string
+                #:stream-terpri
+                #:stream-fresh-line
+                #:stream-finish-output
+                #:stream-force-output
+                #:stream-advance-to-column
+                #:stream-start-line-p)
+  (:import-from #:alexandria
+                #:array-index
+                #:clamp
+                #:string-designator
+                #:make-keyword
+                #:parse-body #:parse-ordinary-lambda-list
+                #:with-gensyms #:with-unique-names
+                #:remove-from-plist
+                #:starts-with-subseq
+                #:when-let #:if-let
+                #:assoc-value
+                #:disjoin
+                #:doplist
+                #:once-only
+                #:switch
+                #:switch)
   (:import-from #:serapeum
                 #:fmt #:eif #:econd
                 #:define-do-macro #:defconst
