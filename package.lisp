@@ -19,19 +19,21 @@
            #:no-such-tag
            #:*suppress-inserted-spaces*
            #:interpret-html-tree)
-  (:shadowing-import-from :alexandria :switch)
-  (:import-from
-   :serapeum
-   :fmt :eif :econd
-   :define-do-macro :defconst
-   :nlet :nix :assure
-   :find-keyword
-   :-> :with-thunk
-   :and-let* :op :string-prefix-p
-   :memq
-   :parse-leading-keywords)
-  (:import-from :trivia :match)
-  (:import-from :global-vars :define-global-parameter))
+  (:shadowing-import-from #:alexandria
+                          #:switch)
+  (:import-from #:serapeum
+                #:fmt #:eif #:econd
+                #:define-do-macro #:defconst
+                #:nlet #:nix #:assure
+                #:find-keyword
+                #:-> #:with-thunk
+                #:and-let* #:op #:string-prefix-p
+                #:memq
+                #:parse-leading-keywords)
+  (:import-from #:trivia
+                #:match)
+  (:import-from #:global-vars
+                #:define-global-parameter))
 
 (defpackage #:spinneret-user
   (:use #:cl #:parenscript #:spinneret))
