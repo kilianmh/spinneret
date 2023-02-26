@@ -201,25 +201,34 @@
          :autofocus :formaction :formenctype :formmethod :formtarget
          :formnovalidate)
        (:canvas :height :width)
-       (:col :span)
-       (:colgroup :span)
+       (:caption :align)
+       (:col :span :align)
+       (:colgroup :span :align)
        (:command :type :label :icon :disabled
          :radiogroup :checked)
        (:del :cite :datetime)
        (:details :open)
        (:dialog :open)
-       (:embed :src :type :height :width *)
+       (:div :align)
+       (:embed :src :type :height :width :align *)
        (:fieldset :name :disabled :form)
        (:form :action :method :enctype :name :accept-charset
-         :novalidate :target :autocomplete)
+        :novalidate :target :autocomplete)
+       (:h1 :align)
+       (:h2 :align)
+       (:h3 :align)
+       (:h4 :align)
+       (:h5 :align)
+       (:h6 :align)
+       (:hr :align)
        (:html :manifest)
        (:iframe :src :srcdoc :name :width :height :sandbox :seamless :allowfullscreen
          :allowpaymentrequest :allow :frameborder :csp :fetchpriority :loading
-         :referrerpolicy)
+         :referrerpolicy :align)
        (:img :src :alt :height :width :loading :usemap :ismap :border :crossorigin
-         :srcset :sizes)
+         :srcset :sizes :align)
        (:input :name :disabled :form :type :minlength :maxlength :readonly :size :value
-         :autocomplete :autofocus :list :pattern :required :placeholder
+         :autocomplete :autofocus :list :pattern :required :placeholder :align
          :checked :accept :capture :multiple :src :height :width :alt
          :inputmode
          :min :max :step :dirname
@@ -228,16 +237,18 @@
        (:ins :cite :datetime)
        (:keygen :challenge :keytype :autofocus :name :disabled :form)
        (:label :for :form)
+       (:legend :align)
        (:link :href :rel :hreflang :media :type :sizes :integrity :crossorigin)
        (:map :name)
        (:menu :type :label)
        (:meta :name :content :http-equiv :charset :property)
        (:meter :value :min :low :high :max :optimum)
-       (:object :data :type :height :width :usemap :name :form)
+       (:object :data :type :height :width :usemap :name :form :align)
        (:ol :start :reversed :type)
        (:optgroup :label :disabled)
        (:option :disabled :selected :label :value)
        (:output :name :form :for)
+       (:p :align)
        (:param :name :value)
        (:progress :value :max)
        (:q :cite)
@@ -246,13 +257,16 @@
        (:select :name :disabled :form :size :multiple :autofocus :required)
        (:source :src :srcset :sizes :type :media)
        (:style :type :media :scoped)
-       (:table :border)
-       (:td :colspan :rowspan
-         :headers)
+       (:table :border :align)
+       (:tbody :align)
+       (:td :colspan :rowspan :headers :align)
        (:textarea :name :disabled :form :readonly :maxlength :autofocus :required
-         :placeholder :dirname :rows :wrap :cols)
-       (:th :scope :colspan :rowspan :headers)
+        :placeholder :dirname :rows :wrap :cols)
+       (:tfoot :align)
+       (:th :scope :colspan :rowspan :headers :align)
+       (:thead :align)
        (:time :datetime)
+       (:tr :align)
        (:track :kind :src :srclang :label :default)
        (:video :autoplay :preload :controls :loop :poster :height :width
          :mediagroup :muted :src :crossorigin)))
